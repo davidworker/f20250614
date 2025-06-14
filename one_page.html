@@ -24,52 +24,68 @@
     <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <style>
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .input-group {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+        html,
+        body {
+            scroll-behavior: smooth;
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
         }
 
-        .input-group label {
-            margin-bottom: 10px;
+        .nav a {
+            color: #fff;
+            text-decoration: none;
             padding: 10px;
         }
 
-        .input-group input {
-            margin-bottom: 10px;
+        .page {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0f0f0f;
+            color: #fff;
+        }
+
+        .page:nth-child(even) {
+            background-color: #f0f0f0;
+            color: #0f0f0f;
         }
     </style>
-
 </head>
 
 <body>
-
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29101.753875267903!2d120.66816!3d24.251596799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346910a7a4a3114d%3A0xf30d63592b6c66d2!2z5bCP5p6X54Sh6aqo6bWd6IKJ5rW36a6u!5e0!3m2!1szh-TW!2stw!4v1749904645778!5m2!1szh-TW!2stw"
-        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-    <div class="container">
-        <div class="input-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name">
-        </div>
-        <div class="input-group">
-            <label for="address">Address</label>
-            <input type="text" id="address" name="address">
-        </div>
-        <button>送出</button>
+    <div class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
     </div>
-
+    <div class="page" id="home">
+        <h1>Home</h1>
+    </div>
+    <div class="page" id="about">
+        <h1>About</h1>
+    </div>
+    <div class="page" id="contact">
+        <h1>Contact</h1>
+    </div>
 </body>
 
 </html>
